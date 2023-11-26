@@ -30,15 +30,15 @@ def roll_dice():
 # Set up the GUI window
 root = tk.Tk()
 root.title("Dice Roller")
-root.geometry("400x200")  # Width x Height
+root.geometry("600x400")  # Larger window size
 
-# Create a button
-roll_button = tk.Button(root, text="Roll Dice", command=roll_dice)
-roll_button.pack()
+# Create a button with increased size
+roll_button = tk.Button(root, text="Roll Dice", command=roll_dice, height=5, width=10)
+roll_button.pack(pady=20)  # Add padding for spacing
 
-# Create a label to show the dice
-result_label = tk.Label(root, font=("Courier", 12))
-result_label.pack()
+# Create a label to show the dice, centered
+result_label = tk.Label(root, font=("Courier", 16), justify="center")
+result_label.pack(expand=True)
 
 # Start the GUI event loop
 root.mainloop()
